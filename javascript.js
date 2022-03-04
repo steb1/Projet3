@@ -95,5 +95,7 @@ function GenerateurCitation(){
     document.getElementById('author').innerHTML = citation[randomNumber].author;
 }
 function tweetit(){
-    tweetbtn.href =`https://twitter.com/intent/tweet?text= ${text} ~ ${author}`;
+    var quote = document.getElementById('text').textContent;
+    var auth = document.getElementById('author').textContent;
+    tweetbtn.href =`https://twitter.com/intent/tweet?text= ${quote} ~ ${auth}`;
 }
